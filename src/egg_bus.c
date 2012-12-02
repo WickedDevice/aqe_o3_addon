@@ -14,7 +14,6 @@
 static uint16_t egg_bus_read_address = 0;
 static uint8_t egg_bus_sensor_mapping_table[] = {
         0, // index 0 [O3] is on ADC0
-        2, // index 1 [CO] is on  ADC2
 };
 
 char egg_bus_sensor_type_0[] PROGMEM = "O3";

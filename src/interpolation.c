@@ -23,7 +23,7 @@ const uint32_t independent_scaler_inverse[EGG_BUS_NUM_HOSTED_SENSORS] = { 10000 
 uint8_t getTableValue(uint8_t sensor_index, uint8_t table_index, uint8_t get_x_or_get_y){
 
     // the values MUST be provided in ascending order of x-value
-    const uint8_t no2_ppb[][2] = {
+    const uint8_t o3_ppb[][2] = {
             {62,117},
             {75,131},
             {101,152},
@@ -35,22 +35,10 @@ uint8_t getTableValue(uint8_t sensor_index, uint8_t table_index, uint8_t get_x_o
             {INTERPOLATION_TERMINATOR, INTERPOLATION_TERMINATOR}
     };
 
-    const uint8_t co_ppb[][2] = {
-            {134,250},
-            {168,125},
-            {202,49},
-            {232,12},
-            {241,6},
-            {INTERPOLATION_TERMINATOR, INTERPOLATION_TERMINATOR}
-    };
-
-    // sensor index 0 is the NO2 sensor
+    // sensor index 0 is the O3 sensor
     uint8_t return_value = 0;
     if(sensor_index == 0){
-        return_value = no2_ppb[table_index][get_x_or_get_y];
-    }
-    else{  // sensor index 1 is for CO
-        return_value = co_ppb[table_index][get_x_or_get_y];
+        return_value = o3_ppb[table_index][get_x_or_get_y];
     }
 
     return return_value;
