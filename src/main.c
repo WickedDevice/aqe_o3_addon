@@ -8,6 +8,10 @@
 #include <avr/interrupt.h>
 #include <stdint.h>
 #include <string.h>
+#include <math.h>
+#include <limits.h>
+#define __DELAY_BACKWARD_COMPATIBLE__
+#include <util/delay.h>
 #include "utility.h"
 #include "main.h"
 #include "twi.h"
@@ -18,10 +22,6 @@
 #include "heater_control.h"
 #include "mac.h"
 #include "interpolation.h"
-#include <math.h>
-#include <limits.h>
-#define __DELAY_BACKWARD_COMPATIBLE__
-#include <util/delay.h>
 
 //#define INCLUDE_DEBUG_REGISTERS
 
