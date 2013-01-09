@@ -23,7 +23,7 @@
 #include "mac.h"
 #include "interpolation.h"
 
-//#define INCLUDE_DEBUG_REGISTERS
+#define INCLUDE_DEBUG_REGISTERS
 
 void onRequestService(void);
 void onReceiveService(uint8_t* inBytes, int numBytes);

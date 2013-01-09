@@ -15,7 +15,7 @@
 
 /* this table stores the mapping of sensors to support hardware and associated configuration data */
 static const sensor_config_t sensor_config[EGG_BUS_NUM_HOSTED_SENSORS] = {
-        {O3_HEATER_FEEDBACK_RESISTANCE, O3_HEATER_TARGET_POWER_MW, O3_HEATER_POWER_ADC, O3_HEATER_FEEDBACK_ADC, DIGIPOT_WIPER1},
+        {O3_HEATER_FEEDBACK_RESISTANCE, O3_HEATER_TARGET_POWER_MW, O3_HEATER_POWER_ADC, O3_HEATER_FEEDBACK_ADC, DIGIPOT_WIPER0},
 };
 
 // returns -1 if the calculated power required a decrement
