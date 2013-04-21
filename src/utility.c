@@ -96,3 +96,7 @@ void SENSOR_R3_DISABLE(uint8_t sensor_index){
         O3_R3_DISABLE();
     }
 }
+
+uint16_t get_sensor_min_adc_high_r(uint8_t sensor_index){
+    return sensor_index == 0 ? O3_MIN_ADC_HIGH_R : 0xFFFFFFFF;
+}

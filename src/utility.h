@@ -112,6 +112,8 @@
 #define O3_VCC_TENTH_VOLTS   50L
 #define ADC_VCC_TENTH_VOLTS  50L
 
+#define O3_MIN_ADC_HIGH_R   255
+
 /* Utility constants and prototypes */
 void blinkLEDs(uint8_t n, uint8_t which_led);
 void delay_sec(uint8_t n);
@@ -133,5 +135,7 @@ void SENSOR_R2_ENABLE(uint8_t sensor_index);
 void SENSOR_R3_ENABLE(uint8_t sensor_index);
 void SENSOR_R2_DISABLE(uint8_t sensor_index);
 void SENSOR_R3_DISABLE(uint8_t sensor_index);
+
+uint16_t get_sensor_min_adc_high_r(uint8_t sensor_index);
 
 #endif /* UTILITY_H_ */
