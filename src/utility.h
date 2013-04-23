@@ -109,8 +109,8 @@
 #define O3_R1R2R3_THRESHOLD   860L
 #define O3_R1R2_THRESHOLD     675L
 
-#define O3_VCC_TENTH_VOLTS   50L
-#define ADC_VCC_TENTH_VOLTS  50L
+#define O3_VCC_TENTH_VOLTS   5000L
+#define ADC_VCC_TENTH_VOLTS  5000L
 
 #define O3_MIN_ADC_HIGH_R   255
 
@@ -130,7 +130,7 @@ uint32_t get_r3(uint8_t sensor_index);
 uint16_t get_r1r2r3_threshold(uint8_t sensor_index);
 uint16_t get_r1r2_threshold(uint8_t sensor_index);
 
-uint8_t get_sensor_vcc(uint8_t sensor_index);
+uint32_t get_sensor_vcc(uint8_t sensor_index);
 void SENSOR_R2_ENABLE(uint8_t sensor_index);
 void SENSOR_R3_ENABLE(uint8_t sensor_index);
 void SENSOR_R2_DISABLE(uint8_t sensor_index);
